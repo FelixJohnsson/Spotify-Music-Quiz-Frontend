@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Spotify;
+    src: url('../../fonts/Gotham-Font/Gotham-Black.otf');
+}
+@font-face {
+    font-family: Spotify-thin;
+    src: url('../../fonts/Gotham-Font/Gotham-Thin.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Spotify;
+}
+
+.LoginScreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+.LoginScreen-Container {
+    background-color: rgb(20, 20, 20);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 50%;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+}
+
+.thin-font{
+    font-family: Spotify-thin;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+
+.LoginScreenHeader {
+    color: white;
+}
