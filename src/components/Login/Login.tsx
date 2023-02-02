@@ -1,19 +1,17 @@
 import React from "react";
 import "./loginScreen.css";
-import LoginForm from "./LoginForm"
+import LoginButton from "./LoginForm"
+
+const login = () => {
+  window.location.href ="http://localhost:5000/login";
+}
 
 const LoginScreen: React.FC = () => {
     return (
       <div className="LoginScreen" style={{ backgroundColor: "#24292e" }}>
-        <div className="LoginScreen-Container">
-          <LoginForm />
-        </div>
+          <LoginButton onClick={login}/>
       </div>
     );
   };
-
-const login = () => {
-   window.location.href ="http://localhost:5000/login";
-}
 
 export default LoginScreen;

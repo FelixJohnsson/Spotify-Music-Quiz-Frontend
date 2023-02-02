@@ -1,0 +1,33 @@
+p{
+    padding-top: 10px;
+}
+
+.LeftProfileSideBar-container {
+    height: 100vh;
+    width: 20vw;
+    border-right: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-details-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: solid black 1px;
+}
+
+.account-name{
+    color: rgb(211, 211, 211);
+}
+
+
+
+.account-actions-container > p{
+    padding-top: 30px;
+    cursor: pointer;
+    color: white;
+}

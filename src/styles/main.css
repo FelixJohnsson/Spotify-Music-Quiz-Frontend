@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Spotify;
+    src: url('../fonts/Gotham-Font/Gotham-Black.otf');
+}
+@font-face {
+    font-family: Spotify-thin;
+    src: url('../fonts/Gotham-Font/Gotham-Thin.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Spotify;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+h1 {
+    color: white;
+    padding: 20px;
+}
+
+p{
+    color: white;
+    font-family: Spotify-thin;
+}
