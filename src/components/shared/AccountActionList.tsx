@@ -1,5 +1,4 @@
 import * as React from 'react';
-import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -10,7 +9,6 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import Settings from '@mui/icons-material/Settings';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
 
 const AccountActionList = () => {
   const [open, setOpen] = React.useState(true);
@@ -26,28 +24,22 @@ const AccountActionList = () => {
       aria-labelledby="nested-list-subheader"
     >
       <ListItemButton>
-        <ListItemIcon>
-          <Settings />
-        </ListItemIcon>
         <ListItemText primary="Settings" />
       </ListItemButton>
       <ListItemButton>
 
       </ListItemButton>
       <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <EditIcon />
-        </ListItemIcon>
-        <ListItemText primary="Edit account" />
+        <ListItemText primary="Account" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
+      <Collapse in={!open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-                <DeleteForeverIcon />
-             </ListItemIcon>
-        <ListItemText primary="Remove account" />
+             <ListItemText primary="Remove account" />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+             <ListItemText primary="Edit account" />
           </ListItemButton>
         </List>
       </Collapse>
