@@ -5,8 +5,8 @@ import './loggedIn.css'
 import LeftProfileSideBar from '../shared/LeftProfileSideBar'
 import MainNavigationSpace from './MainNavigationSpace'
 import { getSpotifyData } from '../../utils/spotify'
+import { saveToLocalStorage } from '../../utils/localStorage'
 import { useParams, useNavigate } from 'react-router-dom';
-
 
 const LoggedIn = () => {
     const navigate = useNavigate();
@@ -19,6 +19,8 @@ const LoggedIn = () => {
             return navigate('/login');
         }
         const arrayOfTokens = tokens?.split('&')
+        console.log(arrayOfTokens)
+        saveToLocalStorage(arrayOfTokens)
         const res = await getSpotifyData(arrayOfTokens[0].split('=')[1])
         setSpotifyData(res)
         setLoading(false)
